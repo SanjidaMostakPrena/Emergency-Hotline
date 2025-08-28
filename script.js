@@ -2,16 +2,16 @@ let heartCount = 0;
 let coinCount = 100;
 let copyCount = 0;
 
-// Navbar elements
+// Navbar 
 const heartEl = document.querySelector(".heartcount");
 const coinEl = document.querySelector(".coincount");
 const copyEl = document.querySelector(".copycount"); 
 
-// History elements
+// History 
 const historyList = document.getElementById("historyList");
 const clearBtn = document.getElementById("clearHistory");
 
-// All cards
+// cards
 document.querySelectorAll(".card").forEach(card => {
   const heart = card.querySelector(".fa-heart");
   const copyBtn = card.querySelector(".fa-copy")?.parentElement;
@@ -57,7 +57,7 @@ document.querySelectorAll(".card").forEach(card => {
       const time = new Date().toLocaleTimeString();
       alert(`📞${number} নম্বরে কল করা হচ্ছে`);
 
-      // Add to call history
+      // call history
       const li = document.createElement("li");
 li.className = "bg-gray-100 rounded-lg p-3 flex justify-between items-center shadow-sm";
 
