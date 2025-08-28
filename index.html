@@ -9,14 +9,20 @@
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="script.js" defer></script>
 </head>
+
+
+</head>
+
 <body class="bg-gray-100">
 
   <!-- header-->
   <header class="flex justify-between items-center p-6 bg-white shadow">
     <div class="flex items-center gap-4">
       <img src="./assets/logo.png" alt="" class="h-10">
-      <h1 class="font-bold">Emergency <br> Service</h1>
+      <h1 class="font-bold text-[#006747]">Emergency <br> Service</h1>
     </div>
     <div class="flex items-center gap-6">
       <div class="flex items-center gap-2 px-4 py-2 text-black rounded-full bg-green-50">
@@ -28,14 +34,14 @@
         <img src="./assets/coin.png" alt="" class="h-6 w-6">
       </div>
       <div >
-                <button class=" flex items-center gap-2 px-4 py-2 text-black rounded-full bg-green-50">Copy</button>
+                <button class=" flex items-center gap-2 px-9 py-2 text-white rounded-full bg-[#00A63E]">Copy</button>
       </div>
     </div>
   </header>
 
   <!-- Banner -->
-  <section class="bg-green-800 text-center text-white p-8">
-    <img src="./assets/logo.png" alt="" class="mx-auto h-20 mb-4">
+  <section class="bg-[#006747] text-center text-white p-8">
+    <img src="./assets/logo-dark.png" alt="" class="mx-auto h-20 mb-4">
     <h1 class="text-2xl font-bold">জরুরি সেবা ডিরেক্টরি</h1>
     <p class="mx-auto">
       Government Emergency Services at Your Fingertip – A Project by the Government of the People’s Republic of Bangladesh
@@ -43,59 +49,55 @@
   </section>
 
   <!-- Cards1 -->
-   <main class="flex  gap-6 p-6 bg-green-50">
+   <main class="flex  gap-6 p-6 bg-green-50 ">
 
    <section class="grid grid-cols-3  "> 
-  <div class=" p-6 ">
+  <div class=" p-6  ">
     
       
     <div class="rounded-[12px] shadow-md w-[430px] h-[360px] p-[32px] bg-white">
-      <div class="flex gap-24 py-3 w-[40px] h[40px]">
-        <img src="./assets/emergency.png" alt="">
-       <button class=""></button>
-
-      </div>
+      <div class="flex justify-between items-center py-3">
+  <img src="./assets/emergency.png" alt="" class="h-10 w-10 bg-[#FFE3E2]   px-2 py-2 rounded-xl ">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
       
         <h1 class="text-lg font-bold">জাতীয় জরুরি সেবা</h1>
     <p class="text-gray-700">National Emergency</p>
     <br>
-    <p class="text-2xl font-bold number">999</p>
+    <p class="text-2xl   px-2 py-2 font-bold number">999</p>
       <button class=" px-4 py-2 text-gray-700 rounded-full bg-gray-200">সার্বজনীন</button>
-        <div class="mt-4 flex gap-3">
-  <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+        <div class="mt-4 flex gap-3 ">
+  <button class="flex-1 py-2 bg-white  text-black rounded border border-gray  ">
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
   </div>
   </div>
  
-
-
 <!-- card2 -->
 
 <div class="p-6">
     
       
     <div class="rounded-[12px] shadow-md  bg-white [430px] h-[360px] p-[32px]">
-      <div class="flex gap-24 py-3 w-[40px] h[40px]">
-        <img src="./assets/police.png" alt="">
-       <button class=""></button>
-
-      </div>
+       <div class="flex justify-between items-center py-3">
+  <img src="./assets/police.png" alt="" class="bg-[#DFEFFF] h-10 w-10 px-2 py-2 rounded-xl">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
       
         <h1 class="text-lg font-bold">পুলিশ</h1>
     <p class="text-gray-700">Police</p>
     <br>
-    <p class="text-2xl font-bold number">999</p>
+    <p class="text-2xl  px-2 py-2 font-bold number">999</p>
       <button class=" px-4 py-2 text-gray-700 rounded-full bg-gray-200">পুলিশ</button>
         <div class="mt-4 flex gap-3">
   <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
   </div>
   </div>
@@ -104,23 +106,21 @@
     
       
     <div class="rounded-[12px] shadow-md bg-white w-[430px] h-[360px] p-[32px]">
-      <div class="flex gap-24 py-3 w-[40px] h[40px]">
-        <img src="./assets/fire-service.png" alt="">
-       <button class=""></button>
-
-      </div>
-      
+      <div class="flex justify-between items-center py-3">
+  <img src="./assets/ambulance.png" alt="" class="h-10 w-10 bg-[#FFE3E2]   px-2 py-2 rounded-xl">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
         <h1 class="text-lg font-bold">ফায়ার সার্ভিস</h1>
     <p class="text-gray-700">Fire Service</p>
     <br>
-    <p class="text-2xl font-bold number">999</p>
+    <p class="text-2xl  px-2 py-2 font-bold number">999</p>
       <button class="px-4 py-2 text-gray-700 rounded-full bg-gray-200">ফায়ার</button>
         <div class="mt-4 flex gap-3">
   <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
   </div>
   </div>
@@ -130,23 +130,22 @@
     
       
     <div class="rounded-[12px] shadow-md bg-white [430px] h-[360px] p-[32px]">
-      <div class="flex gap-24 py-3 w-[40px] h[40px]">
-        <img src="./assets/ambulance.png" alt="">
-       <button class=""></button>
-
-      </div>
+       <div class="flex justify-between items-center py-3">
+  <img src="./assets/ambulance.png" alt="" class="h-10 w-10 bg-[#FFE3E2]   px-2 py-2 rounded-xl">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
       
         <h1 class="text-lg font-bold">অ্যাম্বুলেন্স</h1>
     <p class="text-gray-700">Ambulance</p>
     <br>
-    <p class="text-2xl font-bold number">1994-999999</p>
+    <p class="text-2xl py-2 font-bold number">1994-999999</p>
       <button class=" px-4 py-2 text-gray-700 rounded-full bg-gray-200">স্বাস্থ্য</button>
         <div class="mt-4 flex gap-3">
   <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
   </div>
   </div>
@@ -156,23 +155,22 @@
     
       
     <div class="rounded-[12px] shadow-md bg-white w-[430px] h-[360px] p-[32px]">
-      <div class="flex gap-24 py-3 w-[40px] h[40px]">
-        <img src="./assets/emergency.png" alt="">
-       <button class=""></button>
-
-      </div>
+       <div class="flex justify-between items-center py-3">
+  <img src="./assets/emergency.png" alt="" class="h-10 w-10 bg-[#FFE3E2]   px-2 py-2 rounded-xl">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
       
         <h1 class="text-lg font-bold">নারী ও শিশু সহায়তা</h1>
     <p class="text-gray-700">Women & Child Helpline</p>
     <br>
-    <p class="text-2xl font-bold number">109</p>
+    <p class="text-2xl  px-2 py-2 font-bold number">109</p>
       <button class="px-4 py-2 text-gray-700 rounded-full bg-gray-200">সহায়তা</button>
        <div class="mt-4 flex gap-3">
   <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
   </div>
   </div>
@@ -182,23 +180,22 @@
     
       
     <div class="rounded-[12px] shadow-md bg-white  w-[430px] h-[360px] p-[32px]">
-      <div class="flex gap-24  py-3 w-[40px] h[40px]">
-        <img src="./assets/emergency.png" alt="">
-       <button class=""></button>
-
-      </div>
+       <div class="flex justify-between items-center py-3">
+  <img src="./assets/emergency.png" alt="" class="h-10 w-10 bg-[#FFE3E2]   px-2 py-2 rounded-xl">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
       
         <h1 class="text-lg font-bold">দুদক</h1>
     <p class="text-gray-700">Anti-Corruption</p>
     <br>
-    <p class="text-2xl font-bold number">106</p>
+    <p class="text-2xl  px-2 py-2 font-bold number">106</p>
       <button class=" px-4 py-2 text-gray-700 rounded-full bg-gray-200">সরকারি</button>
        <div class="mt-4 flex gap-3">
   <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
   </div>
   </div>
@@ -208,23 +205,22 @@
     
       
     <div class="rounded-[12px] shadow-md bg-white w-[430px] h-[360px] p-[32px]">
-      <div class="flex gap-24  py-3 w-[40px] h[40px]">
-        <img src="./assets/emergency.png" alt="">
-       <button class=""></button>
-
-      </div>
+       <div class="flex justify-between items-center py-3">
+  <img src="./assets/emergency.png" alt="" class="h-10 w-10 bg-[#FFE3E2]   px-2 py-2 rounded-xl">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
       
         <h1 class="text-lg font-bold">বিদ্যুৎ বিভ্রাট</h1>
     <p class="text-gray-700">Electricity Outage</p>
     <br>
-    <p class="text-2xl font-bold number">16216</p>
+    <p class="text-2xl py-2  font-bold number">16216</p>
       <button class=" px-4 py-2 text-gray-700 rounded-full bg-gray-200">বিদ্যুৎ</button>
         <div class="mt-4 flex gap-3">
   <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 w-32 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 w-32 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
   </div>
   </div>
@@ -234,23 +230,22 @@
     
       
     <div class="rounded-[12px] shadow-md [430px] bg-white  h-[360px] p-[32px] ">
-      <div class="flex gap-24 py-3 w-[40px] h[40px]">
-        <img src="./assets/emergency.png" alt="">
-       <button class=""></button>
-
-      </div>
+       <div class="flex justify-between items-center py-3">
+  <img src="./assets/emergency.png" alt="" class="h-10 w-10 bg-[#FFE3E2]   px-2 py-2 rounded-xl">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
       
         <h1 class="text-lg font-bold">ব্র্যাক</h1>
     <p class="text-gray-700">Brac</p>
     <br>
-    <p class="text-2xl font-bold number">16445</p>
+    <p class="text-2xl py-2 font-bold number">16445</p>
       <button class=" px-4 py-2 text-gray-700 rounded-full bg-gray-200">এনজিও</button>
         <div class="mt-4 flex gap-3">
   <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 w-32 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 w-32 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
   </div>
   </div>
@@ -260,24 +255,29 @@
 
         <div class="rounded-[12px] shadow-md bg-white [430px] h-[360px] p-[32px] ">
 
-      <div class="flex gap-24  py-3 w-[40px] h[40px] ">
+      <!-- <div class="flex gap-24  py-3 w-[40px] h[40px] ">
         <img src="./assets/emergency.png" alt="">
-       <button class=""></button>
+       <button class=""><i class="fa-regular fa-heart"></i></button>
 
-      </div>
+      </div> -->
+      <div class="flex justify-between items-center py-3">
+  <img src="./assets/emergency.png" alt="" class="h-10 w-10 bg-[#FFE3E2]   px-2 py-2 rounded-xl">
+  <button><i class="fa-regular fa-heart"></i></button>
+</div>
+
       
         <h1 class="text-lg font-bold">বাংলাদেশ রেলওয়ে</h1>
     <p class="text-gray-700 ">Bangladesh Railway</p>
     <br>
-    <p class="text-2xl font-bold number">163</p>
+    <p class="text-2xl  px-2 py-2 font-bold number">163</p>
       <button class="px-4 py-2 text-gray-700 rounded-full bg-gray-200">পরিবহন</button>
     
     <div class="mt-4 flex gap-3">
   <button class="flex-1 py-2 bg-white text-black rounded border border-gray">
-  Copy
+  <i class="fa-regular fa-copy"></i>Copy
 </button>
 
-  <button class=" flex-1 w-32 py-2 bg-green-600 text-white rounded">Call</button>
+  <button class=" flex-1 w-32 py-2 bg-[#00A63E] text-white rounded"><i class="fa-solid fa-phone"></i>Call</button>
 </div>
 
   </div>
@@ -289,8 +289,8 @@
   <div class="w-[500px] py-7">
 <div class="bg-white rounded-2xl  p-4 h-full ">
       <div class="flex justify-between items-center px-5 py-5 mb-4">
-        <h2 class="font-bold text-lg">Call History</h2>
-        <button id="clearHistory" class="bg-green-500 text-white p-8 py-2 rounded-full text-lg">Clear</button>
+        <h2 class="font-bold text-lg px-2 "><i class="fa-regular fa-clock"></i>Call History</h2>
+        <button id="clearHistory" class="bg-[#00A63E] text-white px-9 rounded-full text-lg">Clear</button>
       </div>
       <ul id="historyList" class="space-y-2 text-sm text-gray-700"></ul>
     </div>
@@ -301,6 +301,7 @@
   </main>
 
 <script src="script.js"></script>
+
 
 
 </body>
