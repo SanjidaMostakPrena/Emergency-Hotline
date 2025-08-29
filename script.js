@@ -1,54 +1,84 @@
 let heartCount = 0;
 let coinCount = 100;
 let copyCount = 0;
-let heartEl = document.querySelector(".heartcount");
-let coinEl  = document.querySelector(".coincount");
-let copyEl  = document.querySelector(".copycount");
-let historyList = document.getElementById("historyList");
-let clearBtn = document.getElementById("clearHistory");
-let cards = document.querySelectorAll(".card");
-cards.forEach(function(card) {
-  let heartBtn = card.querySelector(".fa-heart");
-  let copyBtn  = card.querySelector(".fa-copy");
-  let callBtn  = card.querySelector(".fa-phone");
+ 
+const heartEl = document.querySelector(".heartcount");
+const coinEl = document.querySelector(".coincount");
+const copyEl = document.querySelector(".copycount"); 
 
-  let number  = card.querySelector(".number").innerText;
-  let service = card.querySelector("h1").innerText;
-  if (heartBtn) {
-    heartBtn.addEventListener("click", function() {
-      heartBtn.classList.toggle("fa-solid");
-      heartBtn.classList.toggle("fa-regular");
-      heartBtn.classList.toggle("text-red-500");
 
-      heartCount = heartCount + 1;
-      heartEl.innerText = heartCount;
-    });
-  }
+const historyList = document.getElementById("historyList");
+const clearBtn = document.getElementById("clearHistory");
+
+document.querySelectorAll(".card").forEach(card => {
+  const heart = card.querySelector(".fa-heart");
+  const copyBtn = card.querySelector(".fa-copy")?.parentElement;
+  const callBtn = card.querySelector(".fa-phone")?.parentElement;
+  const numberEl = card.querySelector(".number");
+  const number = numberEl?.innerText;
+  const service = card.querySelector("h1")?.innerText;
+
+  
+const heartButtons = document.querySelectorAll(".card .fa-heart");
+
+
+const heartEl = document.querySelector(".heartcount");
+
+let heartCount = 0;
+
+heartButtons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    heartCount++;
+    heartEl.innerText = heartCount;
+  });
+});
+
+  // Copy 
   if (copyBtn) {
-    copyBtn.parentElement.addEventListener("click", function() {
-      navigator.clipboard.writeText(number).then(function() {
+    copyBtn.addEventListener("click", () => {
+      if (number) {
+        navigator.clipboard.writeText(number);
         alert(`${number} নম্বরটি কপি করা হয়েছে`);
-        copyCount = copyCount + 1;
-        copyEl.innerText = copyCount;
-      });
+        copyCount++;
+        copyEl.textContent = copyCount;
+      }
     });
   }
+
+  // Call 
   if (callBtn) {
-    callBtn.parentElement.addEventListener("click", function() {
+    callBtn.addEventListener("click", () => {
       if (coinCount < 20) {
         alert("❌ফোন করার জন্য পর্যাপ্ত কয়েন নেই!");
         return;
       }
-      coinCount = coinCount - 20;
-      coinEl.innerText = coinCount;
+
+      coinCount -= 20;
+      coinEl.textContent = coinCount;
+      const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
       alert(`📞${number} নম্বরে কল করা হচ্ছে`);
-      let li = document.createElement("li");
-      li.className = "bg-gray-100 rounded-lg p-2";
-      li.innerText = service + " (" + number + ") - " + new Date().toLocaleTimeString();
-      historyList.appendChild(li);
+
+      // call 
+     const li = document.createElement("li");
+li.className = "bg-gray-100 rounded-lg p-3 flex justify-between items-center shadow-sm";
+
+li.innerHTML = `
+  <div class="flex flex-col">
+    <span class="font-semibold text-gray-800">${service}</span>
+    <span class="text-gray-600">${number}</span>
+  </div>
+  <span class="text-gray-500 text-sm">${time}</span>
+`;
+
+historyList.appendChild(li);
     });
   }
 });
-clearBtn.addEventListener("click", function() {
+
+
+// Clear history
+clearBtn.addEventListener("click", () => {
   historyList.innerHTML = "";
 });
+
+
