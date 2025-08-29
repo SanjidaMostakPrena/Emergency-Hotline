@@ -36,7 +36,7 @@ document.querySelectorAll(".card").forEach(card => {
     copyBtn.addEventListener("click", () => {
       if (number) {
         navigator.clipboard.writeText(number);
-        alert(`Number ${number} copied`);
+        alert(`${number} নম্বরটি কপি করা হয়েছে`);
         copyCount++;
         copyEl.textContent = copyCount;
       }
