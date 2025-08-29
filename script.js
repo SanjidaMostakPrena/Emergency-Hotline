@@ -55,7 +55,7 @@ heartButtons.forEach(function (btn) {
 
       coinCount -= 20;
       coinEl.textContent = coinCount;
-      const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+      const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit',  hour12: true });
       alert(`📞${number} নম্বরে কল করা হচ্ছে`);
 
       // call 
