@@ -20,18 +20,15 @@ document.querySelectorAll(".card").forEach(card => {
 
   
 const heartButtons = document.querySelectorAll(".card .fa-heart");
-
-
 const heartEl = document.querySelector(".heartcount");
-
 let heartCount = 0;
-
 heartButtons.forEach(function (btn) {
   btn.addEventListener("click", function () {
     heartCount++;
     heartEl.innerText = heartCount;
   });
 });
+
 
   // Copy 
   if (copyBtn) {
